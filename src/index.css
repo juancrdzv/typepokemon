@@ -1,13 +1,160 @@
+@font-face {
+  font-family: 'PokemonSolid';
+  font-style: normal;
+  src: url('./fonts/PokemonSolid.ttf') format('truetype');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.master {
+  width: 300px;
+  left: 40px;
+}
+
+.player-form {
+  width: 300px;
+  height: 200px;
+  background-color: lightgray;
+  display: inline-block;
+}
+
+.rounded-borders {
+  border-radius: 29px 29px 29px 29px;
+  -moz-border-radius: 29px 29px 29px 29px;
+  -webkit-border-radius: 29px 29px 29px 29px;
+  border: 7px solid #000000;
+}
+
+.rounded-borders-input {
+  border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  border: 3px solid #000000;
+}
+
+.pokemon-font {
+  font-family: PokemonSolid;
+}
+
+.poke-grid {
+  position: absolute;
+  left: 0px;
+}
+
+.poke-button {
+  background-image: url('./images/gen1.png');
+  width: 52px;
+  height: 52px;
+  display: inline-block;
+  background-color: white;
+  margin: 3px;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 3px solid #000000;
+}
+
+.poke-button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.player-back-pokemon {
+  background-image: url('./images/gen1back.png');
+  display: inline-block;
+  background-size: 5090px;
+  width: 290px;
+  height: 290px;
+  background-color: white;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  border: 5px solid;
+}
+
+.computer-pokemon {
+  background-image: url(/static/media/gen1.35af0b0e.png);
+  display: inline-block;
+  background-size: 5090px;
+  width: 290px;
+  height: 290px;
+  background-color: white;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+  border: 5px solid;
+}
+
+.computer-pokemon-wrapper {
+  left: 140px;
+  position: relative;
+  top: 2px;
+  width: 734px;
+  height: 293px;
+  display: inline-block;
+}
+
+.gameplay-wrapper {
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border: 2px solid;
+  height: 716px;
+}
+
+.life-bar-wrapper {
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 2px solid #000000;
+  width: 420px;
+  height: 40px;
+  position: relative;
+  top: 16px;
+  left: 12px;
+}
+
+.life-bar {
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border-radius: 7px 7px 7px 7px;
+  background-color: red;
+  width: 100%;
+  height: 39px;
+}
+
+.computer-pokemon-wrapper > span > h1 {
+  display: inline-block;
+  margin: 0px;
+  height: 85px;
+  top: -16px;
+  position: relative;
+}
+
+.player-back-pokemon-wrapper {
+  position: absolute;
+  bottom: 0px;
+}
+
+.player-back-pokemon-wrapper > .life-bar-wrapper {
+  top: 0px;
+  left: 300px;
+}
+
+.player-back-pokemon-wrapper > span {
+  position: relative;
+  left: 164px;
+  top: -168px;
 }
