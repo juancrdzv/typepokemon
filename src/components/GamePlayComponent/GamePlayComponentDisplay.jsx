@@ -36,7 +36,9 @@ function GamePlayComponentDisplay(props) {
               direction="row-reverse"
             >
               <Grid item>
-                <PokeSpan>{props.computerPokemon.name}</PokeSpan>
+                <PokeSpan style={{ color: '#664506' }}>
+                  {props.computerPokemon.name}
+                </PokeSpan>
               </Grid>
             </Grid>
           </Grid>
@@ -80,16 +82,24 @@ function GamePlayComponentDisplay(props) {
               alignItems="flex-start"
             >
               <Grid item style={{ paddingRight: '24px' }}>
-                <PokeSpan>{props.pokemon.name}</PokeSpan>
+                <PokeSpan style={{ color: '#030e2d' }}>
+                  {props.pokemon.name}
+                </PokeSpan>
               </Grid>
               <Grid item style={{ paddingRight: '24px' }}>
-                <PokeSpan>Points :{props.points}</PokeSpan>
+                <PokeSpan style={{ color: '#422d04' }}>
+                  Points :{props.points}
+                </PokeSpan>
               </Grid>
               <Grid item style={{ paddingRight: '24px' }}>
-                <PokeSpan>Time :{props.time}</PokeSpan>
+                <PokeSpan style={{ color: '#41f480' }}>
+                  Time :{props.time}
+                </PokeSpan>
               </Grid>
               <Grid item style={{ paddingRight: '24px' }}>
-                <PokeSpan>Phase :{props.phase}</PokeSpan>
+                <PokeSpan style={{ color: 'red' }}>
+                  Phase :{props.phase}
+                </PokeSpan>
               </Grid>
             </Grid>
             <LinearProgress

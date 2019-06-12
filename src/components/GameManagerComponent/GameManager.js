@@ -4,6 +4,7 @@ import PlayerScreen from '../PlayerComponent/PlayerScreen';
 import ChoosePokemonScreen from '../ChoosePokemonComponent/ChoosePokemonScreen';
 import GamePlayComponent from '../GamePlayComponent/GamePlayComponent';
 import GameOverScreen from '../GameOverComponent/GameOverScreen';
+import TutorialScreen from '../TutorialComponent/TutorialScreen';
 
 class InnerGameManager extends Component {
   constructor(props) {
@@ -20,6 +21,9 @@ class InnerGameManager extends Component {
       },
       game_over() {
         return <GameOverScreen />;
+      },
+      tutorial() {
+        return <TutorialScreen />;
       },
     };
   }

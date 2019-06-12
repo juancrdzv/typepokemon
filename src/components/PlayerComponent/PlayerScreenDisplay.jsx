@@ -36,6 +36,12 @@ function PlayerScreenDisplay(props) {
             value="jugar"
             onClick={props.handleClick}
           />
+          <input
+            className="pokemon-font"
+            type="button"
+            value="tutorial"
+            onClick={props.clickToTutorial}
+          />
         </div>
       </Grid>
     </Grid>

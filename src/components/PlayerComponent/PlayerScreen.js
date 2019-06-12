@@ -15,7 +15,11 @@ class InnerPlayerScreen extends Component {
 
   handleClick = () => {
     this.props.addPlayerName(this.state.playerName);
-    this.props.changeScreen();
+    this.props.changeScreen('choose_pokemon');
+  };
+
+  clickToTutorial = () => {
+    this.props.changeScreen('tutorial');
   };
 
   render() {
@@ -23,6 +27,7 @@ class InnerPlayerScreen extends Component {
       <PlayerScreenDisplay
         playerName={this.state.playerName}
         handleClick={this.handleClick}
+        clickToTutorial={this.clickToTutorial}
         handleChange={this.handleChange}
       />
     );
@@ -38,8 +43,8 @@ const mapDispatchToProps = dispatch => {
     addPlayerName: playerName => {
       dispatch(addPlayerName(playerName));
     },
-    changeScreen: () => {
-      dispatch(changeScreen('choose_pokemon'));
+    changeScreen: screen => {
+      dispatch(changeScreen(screen));
     },
   };
 };
